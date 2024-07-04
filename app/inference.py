@@ -363,6 +363,7 @@ def start_conversation_round_state_machine(
             # dispatch this function call
             this_model_response = res_text
             this_model_tools = raw_tool_calls
+
             # add previous call information to user message
             tool_output, summary, _ = api_manager.dispatch_intent(
                 func_call_intent, msg_thread
@@ -375,7 +376,6 @@ def start_conversation_round_state_machine(
             summary = "There is no function call in your previous response. Make sure you include one function call. "
 
         next_user_message = add_step_trigger(summary)
-
         # form message thread for next round. should include what the model said as well
         msg_thread.add_model(this_model_response, this_model_tools)
         if this_model_tools:

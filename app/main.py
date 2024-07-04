@@ -206,7 +206,7 @@ def add_task_related_args(parser: ArgumentParser) -> None:
     parser.add_argument(
         "--enable-layered",
         action="store_true",
-        default=True,
+        default=False,
         help="Enable layered code search.",
     )
     parser.add_argument(

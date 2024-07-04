@@ -188,7 +188,7 @@ class OpenaiModel(Model):
             common.thread_cost.process_output_tokens += output_tokens
 
             raw_response = response.choices[0].message
-            # log_and_print(f"Raw model response: {raw_response}")
+            #log_and_print(f"Raw model response: {raw_response}")
             content = self.extract_resp_content(raw_response)
             raw_tool_calls = raw_response.tool_calls
             func_call_intents = self.extract_resp_func_calls(raw_response)

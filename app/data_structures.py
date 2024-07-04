@@ -109,7 +109,7 @@ class MessageThread:
             self.messages.append({"role": "assistant", "content": message})
         else:
             self.messages.append(
-                {"role": "assistant", "content": None, "tool_calls": json_tools}
+                {"role": "assistant", "content": "", "tool_calls": json_tools}
             )
 
     def to_msg(self) -> list[dict]:

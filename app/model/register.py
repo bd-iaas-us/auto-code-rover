@@ -25,6 +25,8 @@ def register_all_models() -> None:
 
     common.register_model(ollama.Llama3_8B())
     common.register_model(ollama.Llama3_70B())
+    common.register_model(ollama.Deepseeker())
+    common.register_model(ollama.Mistral())
 
     common.register_model(groq.Llama3_8B())
     common.register_model(groq.Llama3_70B())
